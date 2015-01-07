@@ -1,0 +1,70 @@
+#page-projets{
+	width: 100%;
+	left: 25%;
+	background-color: @color-bg;
+}
+
+.proj{
+	position: relative;
+	float: left;
+	width: 25%;
+	height: 100% - @titleSize;
+	.overlay{
+		height: 100%;
+		width: 100%;
+		display: block;
+		opacity: 0.9;
+		transition: all 0.3s ease-in-out;
+		z-index: 100;
+		cursor: pointer;
+
+		&:hover{
+			opacity: 0;
+		}
+
+		h3{
+			margin: 0 auto;
+			text-align: center;
+			width: 40%;
+			padding-top: 45%;
+			color: white;
+		}
+	}
+}
+
+#proj1{
+	background: url(../img/somnium.png) no-repeat center;
+	.overlay{
+		background: url(../img/gamepad.png) no-repeat center;
+		background-size: 50%;
+		background-color: @color-menu;
+	}
+}
+
+#proj2{
+	background: url(../img/site-Internet.png) no-repeat center;
+	.overlay{
+		background: url(../img/laptop.png) no-repeat center;
+		background-size: 50%;
+		background-color: @color-menu;
+	}
+}
+
+#proj3{
+	background: url(../img/bcs.jpg) no-repeat center;
+	.overlay{
+		background: url(../img/headpho.png) no-repeat center;
+		background-size: 50%;
+		background-color: @color-menu;
+	}
+}
+
+#proj4{
+	background: url(../img/musicCraft.gif) no-repeat center;
+	background-size: cover;
+	.overlay{
+		background: url(../img/gamepad.png) no-repeat center;
+		background-size: 50%;
+		background-color: @color-menu;
+	}
+}

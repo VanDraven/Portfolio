@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio - Clément Schepens</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Projet Somnium" />
+        <link rel="stylesheet" type="text/css" href="styles/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="styles/style.css" />
+        <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>  
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+    	<div id="somnium">
+    		<h1>Somnium</h1>
+    		<div id="quit"></div>
+    		<div id="contenu">
+    			<img src="" alt="">
+    			<div id="pres">
+    				<p>
+    					Somnium est un jeu d'horreur minimaliste en pixel art. Il y a deux phases de jeu : le manoir et les labyrinthes.<br/>
+    					Le manoir est l'histoire d'une jeune fille quicherche à retrouver son identitée, enfermée dans un manoir grouillant de monstres.<br/>
+    					Les labyrinthes sont une sorte de mini-jeu dans lequel notre héroine va devoir trouver le chemin de la sortie sans se faire avoir par l'un des multiples dangers. C'est globalement un jeu de scoring.<br/>
+    					<br/>
+    					Ce projet est ma première tentative dans le monde du jeu vidéo, entièrement codé en flash avec la librairie Flixel j'ai appris comment coder un jeu et me suis confronté aux problématiques du game design.<br/>
+    					C'était très bonne experience, et le jeu, du moins la partie labyrinthes mérite une suite.
+    				</p>
+    				<div id="skills">
+    					<div class="skill" id="skill1"></div>
+    					<div class="skill" id="skill2"></div>
+    					<div class="skill" id="skill3"></div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </body>
+</html>

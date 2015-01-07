@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio - Clément Schepens</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Portfolio de Clément Schepens, Étudiant IMAC" />
+        <link rel="stylesheet" type="text/css" href="styles/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="styles/style.css" />
+        <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>  
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+
+            <div id="flecheL" onclick="changePage(-1)"></div>
+            <div id="flecheR" onclick="changePage(1)"></div>
+            <div id="flecheH" onclick="changePage(-1)"></div>
+            <div id="flecheB" onclick="changePage(1)"></div>
+
+            <nav id="menu">
+                <div id='border'></div>
+                <ul>
+                    <li id="accueil" onclick="toPage(0)">Clément Schepens</li>
+                    <li id="projets" onclick="toPage(1)">Projets</li>
+                    <li id="musique" onclick="toPage(2)">Musique</li>
+                    <li id="apropos" onclick="toPage(3)">À propos</li>
+                    <li id="contact" onclick="toPage(4)">Contact</li>
+                </ul>
+            </nav>
+            
+            <div id="horizon">
+                <section id="page-accueil">
+                    <div class="container">
+                        <canvas id="canvas"></canvas>
+                        <h1>Clément Schepens</h1>
+                        <h2>Front end - Jeu vidéo - Musique</h2>
+                        <div id="indexCirclesBlock">
+                            <div class="circle" id="cercle1"></div>
+                            <div class="circle" id="cercle2"></div>
+                            <div class="circle" id="cercle3"></div>
+                        </div>
+                    </div> 
+                </section>
+
+                <section id="page-projets">
+                    <div class="container">
+                        <header>
+                            <h2>Mes derniers projets</h2>
+                        </header>
+                        <div class="proj" id="proj1">
+                            <div class="overlay" onclick="window.location.href='http://www.somniumthegame.com/'">
+                                <h3>Somnium</h3>
+                            </div>
+                        </div>
+                        <div class="proj" id="proj2">
+                            <div class="overlay">
+                                <h3>Portfolio</h3>
+                            </div>
+                        </div>
+                        <div class="proj" id="proj3">
+                            <div class="overlay" onclick="window.location.href='http://www.blackcabsociety.com/'">
+                                <h3>Black Cab Society</h3>
+                            </div>
+                        </div>
+                        <div class="proj" id="proj4">
+                            <div class="overlay">
+                                <h3>MusiCraft</h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="page-musique">
+                    <div class="container">
+                        <header>
+                            <h2>Musique</h2>
+                        </header>
+                        <div id="buttons">
+                            <div class="button" id="video" onclick="audioVideo()"></div>
+                            <div class="button" id="audio" onclick="audioVideo()"></div>
+                        </div>
+                        <article id="mvideo">
+                            <h3>Black Cab Society - Steve McQueen</h3>
+                            <div id="controles">
+                                <div class="fvideo" id="fgauche" onclick="videoManager(1)"></div>
+                                <iframe id ="movie" src="//www.youtube.com/embed/XJg-pZTHPwQ" frameborder="0" allowfullscreen></iframe>
+                                <div class="fvideo" id="fdroite" onclick="videoManager(-1)"></div>
+                            </div>
+                        </article>
+                       <article id="maudio">
+                           <p>Il y aura des fichier audio quand j'aurais un compte soundCloud</p>
+                       </article>
+                    </div>
+                </section>
+
+                <section id="page-apropos">
+                    <div class="container">
+                       <header>
+                            <h2>À propos</h2>
+                        </header>
+                        <div id="presentation">
+                            <img src="img/clem2.png" alt="portrait">
+                            <div id="presText">
+                                <h2>Clément Schepens</h2>
+                                <h3>Front end - Jeu vidéo - Musique</h3>
+                                <p> Bonjour, <br/>
+                                    J'espère que ce portfolio vous est agréable. Je suis actuellement en seconde année à l'école d'ingénieur IMAC (Image, Multimédia, Audiovisuel, Communication).
+                                    Avant ça, j'ai obtenu une licience de musicologie, et transporté par mon rêve de devenir rock star j'ai obtenu un diplome de bassiste professionnel au MAI (Music Academy International).<br/>
+                                    Mais même si la musique fait toujours partie de ma vie, l'informatique s'y est fait une grande place. En effet, le monde virtuel me permet de laisser libre court à ma créativité. Construire un monde gigantesque dans lequel on se sent comme une fourmi, créer la peur en pixel art ou simplement chercher des manières innovantes d'utiliser les technologies de l'internet me procure beaucoup de plaisir.
+                                    Si vous appréciez mes traveaux ou mon état d'esprit, n'hésitez pas à prendre contact avec moi grace au lien "contact" en haut à droite de la page.<br/>
+                                    Merci,<br/>
+                                    <br/>
+                                    Clément 'Van' Schepens</p>
+                                <div id="download">
+                                    Télécharger mon CV
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </section>
+
+                 <section id="page-contact">
+                    <div class="container">
+                        <header>
+                            <h2>Contact</h2>
+                        </header>
+                         <form method="POST" action="cible.php">
+                            <input type="text" name="nom" class="name" placeholder="Votre nom">
+                            <input type="text" name="mail" class="mail" placeholder="Votre e-mail">
+                            <textarea name ="message" class="message" placeholder="Votre message"></textarea>
+                            <input type="submit" name="envoyer" class="envoyer" value="Envoyer">
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div id="pop"></div>
+        <script>
+
+            window.requestAnimFrame = (function(){
+                return  window.requestAnimationFrame  || 
+                window.webkitRequestAnimationFrame    || 
+                window.mozRequestAnimationFrame       || 
+                window.oRequestAnimationFrame         || 
+                window.msRequestAnimationFrame        ||  
+                function( callback ){
+                    window.setTimeout(callback, 1000 / 60);
+                };
+        
+            })();
+
+
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+
+            var W = window.innerWidth, H = window.innerHeight;
+            canvas.width = W;
+            canvas.height = H;
+
+
+            var particleCount = 100,
+            particles = [],
+            minDist = 100,
+            dist;
+
+            function paintCanvas() {
+                ctx.fillStyle = "rgba(0,0,0,1)";
+                ctx.fillRect(0,0,W,H);
+            }
+
+            function Particle() {
+                this.x = Math.random() * W;
+                this.y = Math.random() * H;
+
+                this.vx = -0.1 + Math.random() * 0.2;
+                this.vy = -0.1 + Math.random() * 0.2;
+
+                this.radius = 3;
+
+                this.draw = function() {
+                    ctx.fillStyle = "white";
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+
+                    ctx.fill();
+                }
+            }
+
+            for(var i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+
+            function draw() {
+
+                paintCanvas();
+
+                for (var i = 0; i < particles.length; i++) {
+                    p = particles[i];
+                    p.draw();
+                }
+                update();
+            }
+
+            function update() {
+
+                for (var i = 0; i < particles.length; i++) {
+                    p = particles[i];
+            
+                    p.x += p.vx;
+                    p.y += p.vy
+
+
+                    if(p.x + p.radius > W) 
+                        p.x = p.radius;
+            
+                    else if(p.x - p.radius < 0) {
+                      p.x = W - p.radius;
+                    }
+            
+                    if(p.y + p.radius > H) 
+                        p.y = p.radius;
+            
+                    else if(p.y - p.radius < 0) {
+                        p.y = H - p.radius;
+                    }
+            
+                    for(var j = i + 1; j < particles.length; j++) {
+                        p2 = particles[j];
+                        distance(p, p2);
+                    }
+
+                }
+            }
+
+            function distance(p1, p2) {
+                var dist,
+                dx = p1.x - p2.x,
+                dy = p1.y - p2.y;
+        
+                dist = Math.sqrt(dx*dx + dy*dy);
+
+
+                if(dist <= minDist) {
+
+                    ctx.beginPath();
+                    ctx.strokeStyle = "rgba(235,215,250,"+ (1.2-dist/minDist) +")";
+                    ctx.moveTo(p1.x, p1.y);
+                    ctx.lineTo(p2.x, p2.y);
+                    ctx.stroke();
+                    ctx.closePath();
+            
+
+                    var ax = dx/2000,
+                    ay = dy/2000;
+            
+                    p1.vx -= ax;
+                    p1.vy -= ay;
+            
+                    p2.vx += ax;
+                    p2.vy += ay;
+                }
+            }
+
+
+            function animloop() {
+                draw();
+                requestAnimFrame(animloop);
+            }
+
+            animloop(); 
+
+        </script>
+	</body>
+</html>

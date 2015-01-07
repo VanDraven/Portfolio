@@ -1,0 +1,37 @@
+#page-contact {
+    height: 100%;
+    left: 75%;
+    top: 100%;
+}
+
+form{
+	width: 30%;
+	height: 50%;
+	margin: 0 auto;
+	margin-top: 5%;
+
+	input, textarea{
+		display: block;
+		width: 70%;
+		margin-bottom: 2%;
+		border: 1px lightgray dashed;
+		user-select: auto;
+
+		&:focus{
+			border: 1px lightgray solid;
+		}
+	}
+
+	textarea{
+		height: 40%;
+		width: 100%;
+	}
+
+	.envoyer{
+		background-color: @color-mea;
+		color: white;
+		border: none;
+		height: 30px;
+		width: 30%;
+	}
+}

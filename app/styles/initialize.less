@@ -1,0 +1,67 @@
+@largeur : 4;
+@color-menu: #212121;
+@color-bg: #5d4037;
+@color-mea: #ff5252;
+@titleSize : 18%;
+
+
+@font-face {
+  font-family: 'roboto';
+  src: url('Roboto-Thin.ttf');
+}
+
+* {
+  font-family: roboto;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  &:before, &:after{
+    box-sizing: border-box;
+  }
+}
+
+html,body {  
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    user-select: none;
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+}
+
+#horizon{
+    width: 100% * @largeur;
+    height: 100%;
+
+    &>section{
+    	display: inline-block;
+	    height: 100%;
+	    width: 100% / @largeur;
+      float: left;
+	    position: absolute;
+    }
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: block;
+    transition: all 0.5s ease-in-out;
+    overflow-y: auto;
+}
+
+header{
+  height: @titleSize;
+  background-color: @color-mea;
+
+  h2{
+    padding-top: 3.5%;
+    text-transform: uppercase;
+  }
+}

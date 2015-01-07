@@ -1,0 +1,101 @@
+#flecheL, #flecheR{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    z-index: 900;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    opacity: .4;
+}
+
+#flecheL{
+    display: none;
+    top: 50%;
+    left: 1.5%;
+    background-image: url(../img/flecheL.png); 
+    &:hover{
+    	transform: translateX(-15%);
+		opacity: 1;
+    }
+}
+
+#flecheR{
+    display: block;
+    top: 50%;
+    right: 1.5%;
+    background-image: url(../img/fleche.png); 
+    &:hover{
+    	transform: translateX(15%);
+		opacity: 1;
+    }
+}
+
+#flecheH, #flecheB{
+    position: fixed;
+    display: none;
+    width: 50px;
+    height: 50px;
+    z-index: 900;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    opacity: .4;
+    &:hover{
+    	opacity: 1;
+    }
+}
+
+#flecheH{
+    top: 2%;
+    right: 1.5%;
+    background-image: url(../img/flecheH2.png); 
+}
+
+#flecheB{
+    top: 10%;
+    right: 1.5%;
+    background-image: url(../img/flecheB2.png); 
+}
+
+nav{
+    position: relative;
+    display: block;
+    height: 85px;
+    width: 100%;
+    z-index: 100;
+    font-size: 1em;
+    color: white;
+    top: 0;
+    background-color: @color-menu;
+
+    ul{
+        margin: 0 30px;
+        padding-top: 25px;
+
+    	li{
+    		display: inline;
+            margin: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            text-transform: uppercase; 
+
+            &:hover{
+                opacity: 0.8;
+            }
+    	}
+
+        #projets{
+            margin-left: 70%;
+        }
+    }
+}
+
+#border{
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    background: white;
+    width: 0;
+    height: 5px;
+    transition: all 0.3s ease-in-out;
+    z-index: 9000;
+}

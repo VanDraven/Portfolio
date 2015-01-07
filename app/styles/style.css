@@ -1,0 +1,468 @@
+@font-face {
+  font-family: 'roboto';
+  src: url('Roboto-Thin.ttf');
+}
+* {
+  font-family: roboto;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+#wrap {
+  width: 100%;
+  height: 100%;
+}
+#horizon {
+  width: 400%;
+  height: 100%;
+}
+#horizon > section {
+  display: inline-block;
+  height: 100%;
+  width: 25%;
+  float: left;
+  position: absolute;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  display: block;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+  overflow-y: auto;
+}
+header {
+  height: 18%;
+  background-color: #ff5252;
+}
+header h2 {
+  padding-top: 3.5%;
+  text-transform: uppercase;
+}
+#flecheL,
+#flecheR {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  z-index: 900;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+  opacity: .4;
+}
+#flecheL {
+  display: none;
+  top: 50%;
+  left: 1.5%;
+  background-image: url(../img/flecheL.png);
+}
+#flecheL:hover {
+  -webkit-transform: translateX(-15%);
+      -ms-transform: translateX(-15%);
+          transform: translateX(-15%);
+  opacity: 1;
+}
+#flecheR {
+  display: block;
+  top: 50%;
+  right: 1.5%;
+  background-image: url(../img/fleche.png);
+}
+#flecheR:hover {
+  -webkit-transform: translateX(15%);
+      -ms-transform: translateX(15%);
+          transform: translateX(15%);
+  opacity: 1;
+}
+#flecheH,
+#flecheB {
+  position: fixed;
+  display: none;
+  width: 50px;
+  height: 50px;
+  z-index: 900;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+  opacity: .4;
+}
+#flecheH:hover,
+#flecheB:hover {
+  opacity: 1;
+}
+#flecheH {
+  top: 2%;
+  right: 1.5%;
+  background-image: url(../img/flecheH2.png);
+}
+#flecheB {
+  top: 10%;
+  right: 1.5%;
+  background-image: url(../img/flecheB2.png);
+}
+nav {
+  position: relative;
+  display: block;
+  height: 85px;
+  width: 100%;
+  z-index: 100;
+  font-size: 1em;
+  color: white;
+  top: 0;
+  background-color: #212121;
+}
+nav ul {
+  margin: 0 30px;
+  padding-top: 25px;
+}
+nav ul li {
+  display: inline;
+  margin: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+nav ul li:hover {
+  opacity: 0.8;
+}
+nav ul #projets {
+  margin-left: 70%;
+}
+#border {
+  position: absolute;
+  top: 80px;
+  left: 30px;
+  background: white;
+  width: 0;
+  height: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+  z-index: 9000;
+}
+#page-accueil {
+  height: 100%;
+  left: 0;
+  background-color: #5d4037;
+}
+canvas {
+  opacity: .2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+h1 {
+  color: white;
+  text-align: center;
+  margin-top: 5%;
+  font-size: 4em;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+h2 {
+  color: white;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 2em;
+  width: 25%;
+  padding-top: 5%;
+  margin: 0 auto;
+}
+h2::before,
+h2::after {
+  width: 10px;
+  height: 100%;
+  display: block;
+  border: 1px solid white;
+}
+#indexCirclesBlock {
+  height: 200px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10%;
+}
+#indexCirclesBlock .circle {
+  border-radius: 50%;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  margin: 0 10px;
+}
+#indexCirclesBlock #cercle1 {
+  background: url(../img/laptop.png) no-repeat center;
+  background-size: 50%;
+  background-color: #ff5252;
+}
+#indexCirclesBlock #cercle2 {
+  background: url(../img/gamepad.png) no-repeat center;
+  background-size: 50%;
+  background-color: #ff5252;
+}
+#indexCirclesBlock #cercle3 {
+  background: url(../img/headpho.png) no-repeat center;
+  background-size: 50%;
+  background-color: #ff5252;
+}
+#page-projets {
+  width: 100%;
+  left: 25%;
+  background-color: #5d4037;
+}
+.proj {
+  position: relative;
+  float: left;
+  width: 25%;
+  height: 82%;
+}
+.proj .overlay {
+  height: 100%;
+  width: 100%;
+  display: block;
+  opacity: 0.9;
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+  z-index: 100;
+  cursor: pointer;
+}
+.proj .overlay:hover {
+  opacity: 0;
+}
+.proj .overlay h3 {
+  margin: 0 auto;
+  text-align: center;
+  width: 40%;
+  padding-top: 45%;
+  color: white;
+}
+#proj1 {
+  background: url(../img/somnium.png) no-repeat center;
+}
+#proj1 .overlay {
+  background: url(../img/gamepad.png) no-repeat center;
+  background-size: 50%;
+  background-color: #212121;
+}
+#proj2 {
+  background: url(../img/site-Internet.png) no-repeat center;
+}
+#proj2 .overlay {
+  background: url(../img/laptop.png) no-repeat center;
+  background-size: 50%;
+  background-color: #212121;
+}
+#proj3 {
+  background: url(../img/bcs.jpg) no-repeat center;
+}
+#proj3 .overlay {
+  background: url(../img/headpho.png) no-repeat center;
+  background-size: 50%;
+  background-color: #212121;
+}
+#proj4 {
+  background: url(../img/musicCraft.gif) no-repeat center;
+  background-size: cover;
+}
+#proj4 .overlay {
+  background: url(../img/gamepad.png) no-repeat center;
+  background-size: 50%;
+  background-color: #212121;
+}
+#page-musique {
+  width: 100%;
+  left: 50%;
+}
+#page-musique article {
+  height: 82%;
+  width: 100%;
+}
+#buttons {
+  position: absolute;
+  margin-top: 2%;
+  margin-left: 10%;
+  z-index: 100;
+}
+#buttons .button {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: block;
+  float: left;
+  cursor: pointer;
+}
+#buttons #video {
+  background: url(../img/youtube.png) no-repeat center;
+  background-size: 80%;
+  background-color: #ff5252;
+}
+#buttons #audio {
+  margin-left: 20px;
+  background: url(../img/soundcl.png) no-repeat center;
+  background-size: 80%;
+  background-color: #ff5252;
+}
+#mvideo {
+  width: 100%;
+  display: block;
+  position: absolute;
+}
+#mvideo h3 {
+  width: 100%;
+  text-align: center;
+  margin-top: 3%;
+  color: #ff5252;
+  text-transform: uppercase;
+}
+#mvideo #controles {
+  margin: 0 auto;
+  margin-top: 5%;
+  width: 60%;
+  height: 60%;
+}
+#mvideo #controles .fvideo {
+  height: 100%;
+  width: 10%;
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+  opacity: .5;
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+#mvideo #controles .fvideo:hover {
+  opacity: 1;
+}
+#mvideo #controles iframe {
+  height: 100%;
+  width: 80%;
+  display: inline-block;
+  float: left;
+}
+#mvideo #controles #fgauche {
+  background: url(../img/arrow48.png) no-repeat center;
+  background-size: 80%;
+}
+#mvideo #controles #fdroite {
+  background: url(../img/arrow43.png) no-repeat center;
+  background-size: 80%;
+}
+#maudio {
+  width: 100%;
+  display: none;
+  position: absolute;
+}
+#page-apropos {
+  width: 100%;
+  left: 75%;
+}
+#presentation {
+  width: 100%;
+  height: 82%;
+}
+#presentation img {
+  display: inline-block;
+  float: left;
+  width: 40%;
+}
+#presentation #presText {
+  display: inline-block;
+  float: right;
+  width: 50%;
+  height: 100%;
+  padding: 10px;
+}
+#presentation #presText h2 {
+  width: 100%;
+  text-align: left;
+  color: black;
+  text-transform: uppercase;
+}
+#presentation #presText h3 {
+  color: #ff5252;
+}
+#presentation #presText p {
+  width: 100%;
+  padding-right: 25%;
+  margin-top: 20px;
+  text-align: justify;
+}
+#presentation #presText #download {
+  background-color: #ff5252;
+  color: white;
+  width: 25%;
+  height: 50px;
+  text-align: center;
+  line-height: 3;
+  text-transform: uppercase;
+  float: right;
+  margin-right: 25%;
+  margin-top: 2%;
+  cursor: pointer;
+}
+#page-contact {
+  height: 100%;
+  left: 75%;
+  top: 100%;
+}
+form {
+  width: 30%;
+  height: 50%;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+form input,
+form textarea {
+  display: block;
+  width: 70%;
+  margin-bottom: 2%;
+  border: 1px lightgray dashed;
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
+}
+form input:focus,
+form textarea:focus {
+  border: 1px lightgray solid;
+}
+form textarea {
+  height: 40%;
+  width: 100%;
+}
+form .envoyer {
+  background-color: #ff5252;
+  color: white;
+  border: none;
+  height: 30px;
+  width: 30%;
+}
+#pop {
+  display: none;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #5d4037;
+}
