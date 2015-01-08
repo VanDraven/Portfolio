@@ -21,11 +21,6 @@ var videosTitles = ["Black Cab Society - Steve Mc Queen",
 var currentVideo = 0;
 
 ///////////////////////////////////////////CHANGER PAGE///////////////////////////////////// 
-$(document).on('scroll', function(){
-	if(currentPage == 1){
-		console.log($(document).scrollTop());
-	}
-});	
 
 
 function toPage(index){
@@ -108,23 +103,19 @@ function allowArrows(){
 		document.getElementById('flecheL').style.display = "none";
 		document.getElementById('flecheR').style.display = "none";
 	}
-
-	else if(currentPage == 3){
-		document.getElementById('flecheR').style.display = "none";
-	}
 	else{
 		document.getElementById('flecheL').style.display = "block";
 		document.getElementById('flecheR').style.display = "block";
 	}
 
-	if(currentPage == 2 || currentPage == 3 || currentPage == 4){
+/*	if(currentPage == 2 || currentPage == 3 || currentPage == 4){
 		document.getElementById('flecheL').backgroundImage = 'url("../img/flecheL2.png")';
 		document.getElementById('flecheR').backgroundImage = 'url("../img/fleche2.png")';
 	}
 	else{
 		document.getElementById('flecheL').backgroundImage = 'url("../img/flecheL.png")';
 		document.getElementById('flecheR').backgroundImage = 'url("../img/fleche.png")';
-	}
+	}*/
 
 }
 
